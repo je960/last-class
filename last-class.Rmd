@@ -1,0 +1,38 @@
+---
+title: "last-class"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(remotes)
+library(tidyverse)
+library(memer)
+remotes::install_github("sctyner/memer")
+```
+
+```{r}
+sample(seq(as.Date('2030/04/28'), as.Date('2040/04/28'), by="day"), 1)
+
+meme_get("ExpandingBrain") %>% 
+  meme_text_brain("Watching June vape from lecture", 
+                  "Watching June vape from breakout room", 
+                  "Watching June vape with transcendent cat meme", 
+                  "Watching June vape at Demo Day in in front of your parents", 
+                  size = 17)
+
+meme_get("ShiaJustDoIt") %>% 
+  meme_text_bottom("JUST LOAD. MY SHINY APP.", size = 36)
+
+meme_get("BatmanRobin") %>% 
+  meme_text_Batman("YEAH")
+meme_get("HotlineDrake") %>% 
+  meme_text_drake("Putting graphs in Shiny for Demo Day",
+                  "Putting your graphs on a PPT instead")
+meme_explain("BatmanRobin", launch = F, content_warning = T)
+```
+
+
